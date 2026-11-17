@@ -1,0 +1,10 @@
+{
+  "name": "sp-mcs-0701",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "node setup.mjs",
+    "build": "node build.mjs",
+    "preview": "node server.mjs"
+  }
+}

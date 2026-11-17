@@ -1,9 +1,15 @@
 /*/
 !/scripts/
 !/templates/
+!/SP-MCS-standard/
+!/SP-MCS-0701/
 
 **/node_modules/
 **/dist/
+!/SP-MCS-standard/**/dist/
+!/SP-MCS-standard/**/dist/**
+!/SP-MCS-0701/**/dist/
+!/SP-MCS-0701/**/dist/**
 **/.DS_Store
 **/*.local
 

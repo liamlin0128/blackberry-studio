@@ -1,0 +1,6 @@
+{
+    "title":  "SP-MCS-0701 · 轨道服务",
+    "stack":  "legacy-react-vite",
+    "domain":  "satellite-operations",
+    "migrationRequiredBeforeStackEnforcement":  true
+}

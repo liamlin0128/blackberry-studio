@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  --sp-color-primary: #165dff;
+  --sp-color-primary-hover: #3375d1;
+  --sp-color-primary-soft: #e8efff;
+  --sp-color-text-primary: #1e2b3d;
+  --sp-color-text-secondary: #536071;
+  --sp-color-text-muted: #8d9aac;
+  --sp-color-surface: #fff;
+  --sp-color-surface-subtle: #f6f8fb;
+  --sp-color-surface-hover: #f4f8ff;
+  --sp-color-border: #dfe5ed;
+  --sp-color-divider: #e8ecf1;
+  --sp-color-header-start: #061528;
+  --sp-color-header-middle: #0a2139;
+  --sp-color-header-end: #102943;
+  --sp-space-1: 4px;
+  --sp-space-2: 8px;
+  --sp-space-3: 12px;
+  --sp-space-4: 16px;
+  --sp-space-5: 20px;
+  --sp-space-6: 24px;
+  --sp-control-height: 32px;
+  --sp-radius-dialog: 3px;
+  --sp-shell-header-height: 64px;
+  --sp-shell-nav-width: 250px;
+  --sp-workspace-tab-height: 40px;
+  font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+  color: var(--sp-color-text-primary);
+  background: var(--sp-color-surface);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+* { box-sizing: border-box; } body { min-width: 1024px; min-height: 100vh; margin: 0; } button,input,textarea,select { font: inherit; } button:focus-visible,a:focus-visible { outline: 2px solid var(--sp-color-primary); outline-offset: 2px; }

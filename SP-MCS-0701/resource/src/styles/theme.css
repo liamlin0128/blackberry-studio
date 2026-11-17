@@ -1,0 +1,108 @@
+:root {
+  /* Brand and feedback */
+  --sp-color-primary: #165dff;
+  --sp-color-primary-hover: #3375d1;
+  --sp-color-primary-soft: #e8efff;
+  --sp-color-success: #18a15f;
+  --sp-color-warning: #d48806;
+  --sp-color-danger: #e45656;
+  --sp-color-info: #6f8198;
+
+  /* Text and surfaces */
+  --sp-color-text-primary: #1e2b3d;
+  --sp-color-text-secondary: #536071;
+  --sp-color-text-muted: #8d9aac;
+  --sp-color-text-inverse: #f4f7fb;
+  --sp-color-page: #eef1f5;
+  --sp-color-surface: #fff;
+  --sp-color-surface-subtle: #f6f8fb;
+  --sp-color-surface-hover: #f4f8ff;
+  --sp-color-border: #dfe5ed;
+  --sp-color-divider: #e8ecf1;
+
+  /* Dark application shell */
+  --sp-color-header-start: #061528;
+  --sp-color-header-middle: #0a2139;
+  --sp-color-header-end: #102943;
+  --sp-color-header-text: #bec8d7;
+
+  /* Spacing uses a 4px base grid */
+  --sp-space-1: 4px;
+  --sp-space-2: 8px;
+  --sp-space-3: 12px;
+  --sp-space-4: 16px;
+  --sp-space-5: 20px;
+  --sp-space-6: 24px;
+  --sp-page-padding-block-start: 18px;
+  --sp-page-padding-block-end: 12px;
+  --sp-page-padding-inline: 20px;
+
+  /* Typography */
+  --sp-font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+  --sp-font-size-page-title: 20px;
+  --sp-line-height-page-title: 28px;
+  --sp-font-size-section-title: 16px;
+  --sp-line-height-section-title: 24px;
+  --sp-font-size-body: 14px;
+  --sp-line-height-body: 22px;
+  --sp-font-size-caption: 12px;
+  --sp-line-height-caption: 20px;
+  --sp-font-weight-regular: 400;
+  --sp-font-weight-medium: 500;
+  --sp-font-weight-semibold: 600;
+
+  /* Component geometry */
+  --sp-control-height: 32px;
+  --sp-radius-control: 6px;
+  --sp-radius-card: 8px;
+  --sp-radius-dialog: 3px;
+  --sp-radius-pill: 999px;
+  --sp-shadow-card: 0 3px 12px #17345e0a;
+  --sp-shadow-dialog: 0 18px 48px #172b4d38;
+  --sp-focus-ring: 0 0 0 2px #165dff33;
+  --sp-motion-fast: 180ms;
+  --sp-motion-normal: 250ms;
+
+  /* Desktop application layout */
+  --sp-shell-header-height: 64px;
+  --sp-shell-nav-width: 250px;
+  --sp-workspace-tab-height: 40px;
+  --sp-content-max-width: 1360px;
+  --sp-content-contained-width: 1200px;
+  --sp-desktop-min-width: 1024px;
+
+  /* Element Plus semantic mapping */
+  --el-color-primary: var(--sp-color-primary);
+  --el-color-primary-light-3: #5c8eff;
+  --el-color-primary-light-5: #8baeff;
+  --el-color-primary-light-7: #b9ceff;
+  --el-color-primary-light-8: #d0dfff;
+  --el-color-primary-light-9: var(--sp-color-primary-soft);
+  --el-color-success: var(--sp-color-success);
+  --el-color-warning: var(--sp-color-warning);
+  --el-color-danger: var(--sp-color-danger);
+  --el-color-info: var(--sp-color-info);
+  --el-text-color-primary: var(--sp-color-text-primary);
+  --el-text-color-regular: var(--sp-color-text-secondary);
+  --el-text-color-secondary: var(--sp-color-text-muted);
+  --el-border-color: var(--sp-color-border);
+  --el-border-color-light: var(--sp-color-divider);
+  --el-fill-color-light: var(--sp-color-surface-subtle);
+  --el-fill-color-lighter: var(--sp-color-surface-hover);
+  --el-bg-color: var(--sp-color-surface);
+  --el-font-family: var(--sp-font-family);
+  --el-font-size-base: var(--sp-font-size-body);
+  --el-component-size: var(--sp-control-height);
+  --el-border-radius-base: var(--sp-radius-control);
+}
+
+@media (max-width: 1280px) {
+  :root { --sp-shell-nav-width: 240px; }
+}
+
+@media (max-width: 1100px) {
+  :root {
+    --sp-shell-nav-width: 230px;
+    --sp-page-padding-inline: 14px;
+  }
+}

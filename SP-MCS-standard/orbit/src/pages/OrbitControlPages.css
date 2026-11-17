@@ -1,0 +1,20 @@
+.control-mode-row { margin-bottom: var(--sp-space-5); }
+.control-mode-row .control-field { width: min(580px, 100%); }
+.strategy-input-grid { align-items: end; }
+.strategy-target-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.control-main .control-readonly {
+  overflow: hidden;
+  color: var(--sp-color-text-secondary);
+  background: var(--sp-color-surface-subtle);
+  text-overflow: ellipsis;
+  cursor: default;
+}
+.control-main .control-readonly::placeholder { color: var(--sp-color-text-muted); }
+.control-section .control-calibration-title { margin: 0 0 16px; padding: 10px 12px; border: 1px solid var(--sp-color-border); border-radius: var(--sp-radius-dialog); background: var(--sp-color-surface-subtle); font-size: 13px; }
+.strategy-calibration-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 1220px) {
+  .strategy-target-grid, .strategy-calibration-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 800px) {
+  .strategy-input-grid, .strategy-target-grid, .strategy-calibration-grid { grid-template-columns: minmax(0, 1fr); }
+}

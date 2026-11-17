@@ -1,5 +1,9 @@
 # Git 双栈产品原型工作台
 
+## SP-MCS 双版本交付
+
+当前可分享的完整原型位于 [SP-MCS-standard](SP-MCS-standard/README.md) 与 [SP-MCS-0701](SP-MCS-0701/README.md)。它们共用本工作台 Git 仓库，各整合任务规划、轨道控制、可视化仿真、资源管理四个分系统。安装 Node.js 后，在两个目录分别运行 `npm run preview`，只需 5173 和 5273 两个端口。已提交构建产物，克隆后预览无需安装前端依赖。根目录 `scripts/Start-SpMcsVersions.ps1` 可一次启动两版。原八个工作目录保留作迁移来源，不属于本次分享入口。
+
 这是一个面向 B 端卫星测运控场景的 Codex 原型工作台。工作台维护两套独立模板，每个生成的产品都是独立 Git 仓库。
 
 ## 技术栈

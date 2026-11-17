@@ -1,0 +1,71 @@
+import type { GanttTask, ManualPassRecord, TaskPlanRecord, TransmissionRecord } from '../types/taskPlan'
+
+export const planStatuses = ['待发送', '已发送', '已上星', '已完成', '执行失败', '已取消']
+export const planTypes = ['单星', '协同', '数传']
+export const satellites = ['木铎1B', '木铎1A']
+export const stations = ['BJ-0451', 'ZH-0451']
+
+export const planSummary = [
+  { label: '总数', value: 559, tone: 'primary' },
+  { label: '待发送', value: 18, tone: 'warning' },
+  { label: '已发送', value: 21, tone: 'primary' },
+  { label: '已上星', value: 0, tone: 'info' },
+  { label: '已完成', value: 0, tone: 'success' },
+  { label: '执行失败', value: 24, tone: 'danger' },
+  { label: '已取消', value: 496, tone: 'info' },
+] as const
+
+export const taskPlans: TaskPlanRecord[] = [
+  { planNo:'15007600',arcId:'MD1BSDZH04512394',satellite:'木铎1B',type:'数传',priority:9,status:'待发送',latestUploadAt:'2026-09-15 22:19:28',executeStartAt:'2026-09-15 22:21:28',executeEndAt:'2026-09-15 22:37:43',createdAt:'2026-09-09 12:00:11',sentAt:'—',station:'BJ-0451、ZH-0451',requirementNo:'RW202609090121002',metaTaskNo:'MD1BSDBJ04512401',abnormal:false,abnormalCount:0,abnormalReason:'—' },
+  { planNo:'10002400',arcId:'MD1BSDZH04512386',satellite:'木铎1B',type:'单星',priority:9,status:'已发送',latestUploadAt:'2026-09-15 11:47:10',executeStartAt:'2026-09-15 11:49:10',executeEndAt:'2026-09-15 12:00:41',createdAt:'2026-09-09 12:00:11',sentAt:'2026-09-14 11:47:11',station:'SDZH0451-北师大',requirementNo:'RW202609090121002',metaTaskNo:'1302325033435593',abnormal:false,abnormalCount:0,abnormalReason:'—' },
+  { planNo:'15007500',arcId:'MD1BSDBJ04512341',satellite:'木铎1B',type:'数传',priority:8,status:'待发送',latestUploadAt:'2026-09-12 21:14:45',executeStartAt:'2026-09-12 21:16:45',executeEndAt:'待确认',createdAt:'2026-09-09 10:41:32',sentAt:'—',station:'BJ-0451',requirementNo:'RW202609080131001',metaTaskNo:'MD1BSDBJ04512355',abnormal:false,abnormalCount:0,abnormalReason:'—' },
+  { planNo:'05006600',arcId:'MD1ASDBJ04512319',satellite:'木铎1A',type:'数传',priority:8,status:'已发送',latestUploadAt:'2026-09-10 21:22:35',executeStartAt:'2026-09-10 21:24:35',executeEndAt:'待确认',createdAt:'2026-09-09 00:00:16',sentAt:'2026-09-09 21:22:35',station:'BJ-0451',requirementNo:'RW202609080131001',metaTaskNo:'MD1ASDBJ045114816',abnormal:false,abnormalCount:0,abnormalReason:'—' },
+  { planNo:'15007100',arcId:'MD1BSDBJ045114793',satellite:'木铎1B',type:'数传',priority:8,status:'执行失败',latestUploadAt:'2026-09-09 21:27:29',executeStartAt:'2026-09-09 21:29:29',executeEndAt:'待确认',createdAt:'2026-09-08 12:00:17',sentAt:'2026-09-08 21:27:29',station:'BJ-0451',requirementNo:'RW202609080131001',metaTaskNo:'MD1BSDBJ045114807',abnormal:true,abnormalCount:1,abnormalReason:'接收失败：该弧段状态为已锁定，不可被选择' },
+  { planNo:'11005C00',arcId:'MD1BSDZH04512295',satellite:'木铎1B',type:'协同',priority:8,status:'已取消',latestUploadAt:'2026-09-09 12:20:36',executeStartAt:'2026-09-09 12:22:36',executeEndAt:'待确认',createdAt:'2026-09-04 09:41:45',sentAt:'—',station:'ZH-0451',requirementNo:'RW202609040131001',metaTaskNo:'569188896866761',abnormal:false,abnormalCount:0,abnormalReason:'—' },
+]
+
+export function resolveTaskPlan(planNo: string, requirementNo: string): TaskPlanRecord {
+  return taskPlans.find(item => item.planNo === planNo) ?? {
+    planNo,
+    arcId: '待确认',
+    satellite: '待确认',
+    type: '待确认',
+    priority: '待确认',
+    status: '待确认',
+    latestUploadAt: '待确认',
+    executeStartAt: '待确认',
+    executeEndAt: '待确认',
+    createdAt: '待确认',
+    sentAt: '待确认',
+    station: '待确认',
+    requirementNo,
+    metaTaskNo: '待确认',
+    abnormal: false,
+    abnormalCount: 0,
+    abnormalReason: '待确认',
+  }
+}
+
+export const manualPasses: ManualPassRecord[] = [
+  { id:'2070044158777327616',startedAt:'2026-06-25 14:48:44',endedAt:'2026-06-25 13:48:44',satellite:'木铎1A',creator:'2026222219001659394',remark:'—' },
+]
+
+export const transmissionRecords: TransmissionRecord[] = [
+  { sequence:1,planNo:'01006500',type:'协同',timeliness:'常规',sentAt:'2026-09-10 10:23:51',status:'发送成功',failureReason:'—' },
+  { sequence:2,planNo:'11006500',type:'协同',timeliness:'常规',sentAt:'2026-09-10 10:23:51',status:'发送成功',failureReason:'—' },
+  { sequence:3,planNo:'15007000',type:'数传',timeliness:'常规',sentAt:'2026-09-09 21:33:14',status:'发送成功',failureReason:'—' },
+  { sequence:4,planNo:'05006600',type:'数传',timeliness:'常规',sentAt:'2026-09-09 21:22:35',status:'发送成功',failureReason:'—' },
+  { sequence:7,planNo:'15007100',type:'数传',timeliness:'常规',sentAt:'2026-09-08 21:27:29',status:'发送失败',failureReason:'接收失败：该弧段状态为已锁定，不可被选择' },
+  { sequence:10,planNo:'00003E00',type:'单星',timeliness:'常规',sentAt:'2026-09-08 11:01:32',status:'发送失败',failureReason:'接收失败' },
+]
+
+export const ganttTasks: GanttTask[] = [
+  { id:'11006500',satellite:'木铎1B',lane:'成像',phase:'执行',status:'待发送',left:42,width:5 },
+  { id:'11006400',satellite:'木铎1B',lane:'成像',phase:'上注',status:'已发送',left:61,width:4 },
+  { id:'15007200',satellite:'木铎1B',lane:'数传',phase:'上注',status:'待发送',left:50,width:6 },
+  { id:'15007000',satellite:'木铎1B',lane:'数传',phase:'执行',status:'已发送',left:72,width:7 },
+  { id:'01006500',satellite:'木铎1A',lane:'成像',phase:'执行',status:'待发送',left:42,width:5 },
+  { id:'01006300',satellite:'木铎1A',lane:'成像',phase:'上注',status:'已发送',left:51,width:4 },
+  { id:'01006400',satellite:'木铎1A',lane:'成像',phase:'执行',status:'已发送',left:62,width:5 },
+  { id:'05006600',satellite:'木铎1A',lane:'数传',phase:'执行',status:'已发送',left:73,width:6 },
+]
